@@ -1,0 +1,52 @@
+.menu
+    &__list
+        display: flex
+
+    &__item
+        display: flex
+        align-items: center
+        position: relative
+        font-weight: bold
+        font-size: 1.25rem
+        cursor: pointer
+        &:not(:last-child)
+            margin: 0 16px 0 0
+        
+        &:hover
+            .dropdown
+                opacity: 1
+                pointer-events: auto
+                top: 100%
+    
+    &__link
+        display: block
+    
+    &__icon
+        width: 16px
+        height: 16px
+        margin: 0 0 0 8px
+        stroke: $black
+        stroke-width: 2
+        fill: none
+    
+.dropdown
+    position: absolute
+    top: calc( 100% + 10px )
+    left: 0
+    opacity: 0
+    font-weight: normal
+    font-size: 1rem
+    background: $font
+    padding: 20px
+    box-shadow: 0 1.34307px 6.71533px rgba(0,0,0,.13)
+    pointer-events: none
+    transition: all .2s ease-in-out
+
+    &__item
+        min-width: max-content
+        &:not(:last-child)
+            margin: 0 0 16px 0
+
+    &__link
+        &:hover
+            color: $primary
