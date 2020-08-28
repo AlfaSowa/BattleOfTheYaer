@@ -1,3 +1,4 @@
-import "./sass/style.sass";
+import "./js/main";
 import sprite from "./img/sprite.svg";
-import logo from "./img/logo.svg";
+import img from "./img/image.jpg";
+import "./sass/style.sass";
